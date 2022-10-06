@@ -1,0 +1,30 @@
+{
+  "name": "lms-test-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "next": "12.3.1",
+    "react": "18.2.0",
+    "react-countdown": "^2.2.1",
+    "react-countup": "^4.3.3",
+    "react-dom": "18.2.0",
+    "react-id-swiper": "^3.0.0",
+    "react-lottie-player": "^1.4.3",
+    "react-modal-video": "^1.2.3",
+    "react-visibility-sensor": "^5.1.1",
+    "sass": "^1.55.0",
+    "swiper": "^5.3.6"
+  },
+  "devDependencies": {
+    "eslint": "8.24.0",
+    "eslint-config-next": "12.3.1",
+    "url-loader": "^4.0.0"
+  }
+}
