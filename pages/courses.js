@@ -7,7 +7,7 @@ import Courses from "../components/Courses";
 
 const CoursesPage = () => {
   return (
-    <Layout pageTitle="Kipso | Courses">
+    <Layout pageTitle="Nasims | Courses">
       <NavTwo />
       <PageHeader title="Courses" />
       <Courses />

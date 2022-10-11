@@ -8,7 +8,7 @@ import CallToActionOne from "../components/CallToActionOne";
 
 const PricingPage = () => {
   return (
-    <Layout pageTitle="Kipso | Pricing">
+    <Layout pageTitle="Nasims | Pricing">
       <NavTwo />
       <PageHeader title="Pricing" />
       <Pricing />

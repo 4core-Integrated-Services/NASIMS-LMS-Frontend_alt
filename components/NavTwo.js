@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Link from "next/link";
-
+import Image from "next/image";
 class NavTwo extends Component {
   constructor() {
     super();
@@ -54,12 +54,12 @@ class NavTwo extends Component {
               <Link href="/">
                 <a className="navbar-brand">
                   <img
-                    src="assets/images/N-Power-Logo-removebg.png"
+                    src="/assets/images/N-Power-Logo-removebg.png"
                     className="main-logo"
                     style={{
-                      width: 100,
-                      height: 100,
-                      backgroundPosition: "top",
+                      width: 80,
+                      height: 80,
+                      backgroundPosition: "center",
                       backgroundSize: "cover",
                     }}
                     alt="Awesome Image"
@@ -145,12 +145,11 @@ class NavTwo extends Component {
                 </a>
               </div> */}
               <div className="user">
-                <h4 className="user-name">Hi, Wisdom</h4>
+                <p className="user-name">Hi, Wisdom</p>
                 <img
                   className="user-image"
-                  src="assets/images/random-guy.jpg"
+                  src="/assets/images/random-guy.jpg"
                   alt="random user"
-                  width="100"
                 />
               </div>
             </div>

@@ -30,4 +30,8 @@ const HomePageTwo = () => {
   );
 };
 
+HomePageTwo.getLayout = (page) => {
+  return <>{page}</>;
+};
+
 export default HomePageTwo;

@@ -1,6 +1,10 @@
 import React from "react";
+import coursesData from "./data/courses";
+import { RatingIcon } from "../public/assets/icons/rating";
 
-const CourseDetails = () => {
+const CourseDetails = ({ courseId }) => {
+  const course = coursesData.find((data) => data.id == courseId);
+
   return (
     <section className="course-details">
       <div className="container">
@@ -8,36 +12,39 @@ const CourseDetails = () => {
           <div className="col-lg-8">
             <div className="course-details__content">
               <p className="course-details__author">
-                <img src="/assets/images/team-1-1.jpg" alt="" />
-                by <a href="#">Rosaline Ene</a>
+                <img src={course.creatorImage} alt="" />
+                by <a href="#">{course?.instructor ?? "Rosaline Ene"}</a>
               </p>
 
               <div className="course-details__top">
                 <div className="course-details__top-left">
                   <h2 className="course-details__title">
-                    Improve editing skills
+                    {course?.title ?? "Improving editing"}
                   </h2>
                   <div className="course-one__stars">
                     <span className="course-one__stars-wrap">
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
+                      {"a"
+                        .repeat(course.rating ?? 1)
+                        .split("a")
+                        .slice(0, course.rating ?? 0)
+                        .map((_, index) => {
+                          return <RatingIcon key={index} />;
+                        })}
                     </span>
-                    <span className="course-one__count">4.8</span>
-                    <span className="course-one__stars-count">250</span>
+                    <span className="course-one__stars-count">
+                      {course?.students ?? "250"}
+                    </span>
                   </div>
                 </div>
                 <div className="course-details__top-right">
                   <a href="#" className="course-one__category">
-                    marketing
+                    {course?.tag ?? "marketing"}
                   </a>
                 </div>
               </div>
               <div className="course-one__image">
                 <img
-                  src="/assets/images/basic-photography.jpg"
+                  src={course.thumbnail}
                   alt=""
                   style={{
                     width: 770,
@@ -46,7 +53,6 @@ const CourseDetails = () => {
                     backgroundSize: "cover",
                   }}
                 />
-                <i className="far fa-heart"></i>
               </div>
 
               <ul
@@ -284,13 +290,17 @@ const CourseDetails = () => {
                     </div>
                     <div className="col-xl-5 justify-content-xl-end justify-content-sm-center d-flex">
                       <div className="course-details__review-box">
-                        <p className="course-details__review-count">4.6</p>
+                        <p className="course-details__review-count">
+                          {course?.rating ?? "4.6"}
+                        </p>
                         <div className="course-details__review-stars">
-                          <i className="fas fa-star"></i>
-                          <i className="fas fa-star"></i>
-                          <i className="fas fa-star"></i>
-                          <i className="fas fa-star"></i>
-                          <i className="fas fa-star-half"></i>
+                          {"a"
+                            .repeat(course.rating ?? 1)
+                            .split("a")
+                            .slice(0, course.rating ?? 0)
+                            .map((_, index) => {
+                              return <RatingIcon key={index} />;
+                            })}
                         </div>
                         <p className="course-details__review-text">
                           30 reviews
@@ -394,7 +404,7 @@ const CourseDetails = () => {
               <p className="course-details__price-text">Course price </p>
               <p className="course-details__price-amount">Free</p>
               <a href="#" className="thm-btn course-details__price-btn">
-                Get This Course
+                Add to Collection
               </a>
             </div>
 
@@ -403,25 +413,25 @@ const CourseDetails = () => {
                 <span className="course-details__meta-icon">
                   <i className="far fa-clock"></i>
                 </span>
-                Durations: <span>10 hours</span>
+                Durations: <span>{course?.duration ?? "10"} hours</span>
               </a>
               <a href="#" className="course-details__meta-link">
                 <span className="course-details__meta-icon">
                   <i className="far fa-folder-open"></i>
                 </span>
-                Lectures: <span>6</span>
+                Lectures: <span>{course?.lectures ?? "6"}</span>
               </a>
               <a href="#" className="course-details__meta-link">
                 <span className="course-details__meta-icon">
                   <i className="far fa-user-circle"></i>
                 </span>
-                Students: <span>Max 4</span>
+                Students: <span>{course?.students ?? "14"}</span>
               </a>
               <a href="#" className="course-details__meta-link">
                 <span className="course-details__meta-icon">
                   <i className="fas fa-play"></i>
                 </span>
-                Video: <span>8 hours</span>
+                Video: <span>{course?.videoLength ?? "21"} hours</span>
               </a>
               <a href="#" className="course-details__meta-link">
                 <span className="course-details__meta-icon">

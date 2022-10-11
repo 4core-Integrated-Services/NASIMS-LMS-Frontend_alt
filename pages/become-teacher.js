@@ -8,9 +8,9 @@ import TeamOne from "../components/TeamOne";
 
 const GalleryPage = () => {
   return (
-    <Layout pageTitle="Kipso | Become Teacher">
+    <Layout pageTitle="Nasims | Become Instructor">
       <NavTwo />
-      <PageHeader title="Become Teacher" />
+      <PageHeader title="Become Instruction" />
       <BecomeTeacher />
       <TeamOne />
       <Footer />
