@@ -22,10 +22,12 @@ export default function Document() {
           sizes="16x16"
           href="/assets/images/favicons/favicon2.png"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-          href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,500i,600,700,800%7CSatisfy&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,500&family=Raleway:wght@100;200;300;400;500;600;700&display=swap"
           rel="stylesheet"
-        />
+        ></link>
       </Head>
       <body>
         <Main />

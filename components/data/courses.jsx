@@ -11,6 +11,38 @@ const coursesData = [
     thumbnail: "/assets/images/video-editing.jpg",
     creatorImage: "/assets/images/teach1.jpg",
     videoLength: 15,
+    videoUrl:
+      "https://www.youtube.com/watch?v=ZQDGJn89uNk&ab_channel=ParkerWalbeck",
+  },
+  {
+    id: 7,
+    title: "basic baking and pastry",
+    instructor: "amarachi david",
+    tag: "cooking",
+    duration: 10,
+    lectures: 6,
+    students: 250,
+    rating: 4,
+    thumbnail: "/assets/images/baking.jpeg",
+    creatorImage: "/assets/images/teach1.jpg",
+    videoLength: 15,
+    videoUrl:
+      "https://www.youtube.com/watch?v=UlKkQ9qnmzY&ab_channel=CakeLovers",
+  },
+  {
+    id: 8,
+    title: "ethical hacking beginner course",
+    instructor: "anonymous",
+    tag: "IT and software",
+    duration: 10,
+    lectures: 6,
+    students: 250,
+    rating: 4,
+    thumbnail: "/assets/images/anonymous.jpeg",
+    creatorImage: "/assets/images/teach2.jpg",
+    videoLength: 15,
+    videoUrl:
+      "https://www.youtube.com/watch?v=3yiT_WMlosg&ab_channel=DavidBombal",
   },
   {
     id: 2,
@@ -24,6 +56,8 @@ const coursesData = [
     thumbnail: "/assets/images/react-bootcamp.png",
     creatorImage: "/assets/images/teach2.jpg",
     videoLength: 21,
+    videoUrl:
+      "https://www.youtube.com/watch?v=QFaFIcGhPoM&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&ab_channel=Codevolution",
   },
   {
     id: 3,
@@ -37,6 +71,8 @@ const coursesData = [
     thumbnail: "/assets/images/healty-workout.jpg",
     creatorImage: "/assets/images/teach3.jpg",
     videoLength: 4,
+    videoUrl:
+      "https://www.youtube.com/watch?v=1Q8YleZYOXU&ab_channel=GravityTransformation-FatLossExperts",
   },
   {
     id: 4,
@@ -50,6 +86,8 @@ const coursesData = [
     thumbnail: "/assets/images/marketing-strategy.jpg",
     creatorImage: "/assets/images/teach4.jpg",
     videoLength: 8,
+    videoUrl:
+      "https://www.youtube.com/watch?v=hZLMv5aexto&ab_channel=BrianTracy",
   },
   {
     id: 5,
@@ -63,6 +101,8 @@ const coursesData = [
     thumbnail: "/assets/images/affliate-bootcamp.png",
     creatorImage: "/assets/images/teach1.jpg",
     videoLength: 8,
+    videoUrl:
+      "https://www.youtube.com/watch?v=9_7W5JysbU0&ab_channel=IJAPARIGYANG",
   },
   {
     id: 6,
@@ -76,6 +116,8 @@ const coursesData = [
     thumbnail: "/assets/images/basic-photography.jpg",
     creatorImage: "/assets/images/teach2.jpg",
     videoLength: 14,
+    videoUrl:
+      "https://www.youtube.com/watch?v=pFyOznL9UvA&ab_channel=AlecMarkarian",
   },
 ];
 

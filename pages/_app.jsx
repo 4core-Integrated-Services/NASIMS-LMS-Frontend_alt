@@ -1,4 +1,4 @@
-import "../node_modules/react-modal-video/scss/modal-video.scss";
+// import "../node_modules/react-modal-video/scss/modal-video.scss";
 import "../styles/scss/style.scss";
 import "../styles/scss/responsive.scss";
 import "../styles/plugins/bootstrap/bootstrap.min.css";
