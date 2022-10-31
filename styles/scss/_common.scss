@@ -1,12 +1,6 @@
 * {
   scroll-behavior: smooth;
   font-family: "Raleway";
-
-  a {
-    &:hover {
-      text-decoration: none;
-    }
-  }
 }
 body {
   color: $thm-text-color;
@@ -14,8 +8,15 @@ body {
   line-height: 34px;
   letter-spacing: -0.02em;
   background-color: #f1f1f1;
+  a,
+  a:active,
+  a:hover,
+  a:focus,
+  a:visited {
+    text-decoration: none;
+  }
 }
-
+a,
 a:active,
 a:hover,
 a:focus,
@@ -42,6 +43,10 @@ a:visited {
 .thm-gray-bg {
   background-color: $thm-gray;
 }
+// .banner-container {
+//   width: 80% !important;
+//   margin: 0 auto;
+// }
 
 @media (min-width: 1200px) {
   .container {

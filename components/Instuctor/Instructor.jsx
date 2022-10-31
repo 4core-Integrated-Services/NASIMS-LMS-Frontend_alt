@@ -12,9 +12,12 @@ const Instructor = () => {
              * @type {{id: number; instructorName: string; instructorImage: string;}}
              */
 
-            instructorData.map((instructor) => {
+            instructorData.map((instructor, index) => {
               return (
-                <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                <div
+                  className="col-xl-3 col-lg-6 col-md-6 col-sm-12"
+                  key={instructor?.id ?? index}
+                >
                   <div className="team-one__single">
                     <div className="team-one__image">
                       <img

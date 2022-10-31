@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import Link from "next/link";
 
 const CallToActionTwo = () => {
   return (
@@ -19,13 +19,9 @@ const CallToActionTwo = () => {
                   There are many variations of passages of lore available but{" "}
                   <br /> the majority have suffered alteration in some form.
                 </p>
-
-                <a
-                  href="/become-an-instructor"
-                  className="thm-btn cta-two__btn"
-                >
-                  Start Teaching
-                </a>
+                <Link href="/become-an-instructor" passHref>
+                  <a className="thm-btn cta-two__btn">Start Teaching</a>
+                </Link>
               </div>
             </div>
           </div>
@@ -43,9 +39,9 @@ const CallToActionTwo = () => {
                   <br /> the majority have suffered alteration in some form.
                 </p>
 
-                <a href="/courses" className="thm-btn cta-two__btn">
-                  Start Learning
-                </a>
+                <Link href="/courses" passHref>
+                  <a className="thm-btn cta-two__btn">Start Learning</a>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,0 +1,32 @@
+.sub-section {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 140%;
+  //   height: 31rem;
+  margin-top: 7rem;
+  margin-left: 15px;
+  box-shadow: 0.6px 0.8px 5px 0.9px rgba(204, 204, 204, 0.808);
+  border-radius: 5px;
+
+  &--list {
+    text-align: center;
+    margin-bottom: 1rem;
+    a {
+      color: #555;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      transition: all 0.4s ease-in-out;
+      text-align: center;
+      cursor: pointer;
+      font-size: 13px;
+      &:hover {
+        border-bottom: 0.3px solid #333;
+        color: #555;
+      }
+    }
+  }
+}

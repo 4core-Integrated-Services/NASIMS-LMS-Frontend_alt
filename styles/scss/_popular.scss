@@ -1,0 +1,61 @@
+.heading--popular {
+  text-align: start;
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 10rem;
+}
+.popular {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border: 1px solid #555;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: #5555551f;
+  }
+
+  &--image {
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    object-position: top;
+    height: 5.5rem;
+    width: 9rem;
+    border-radius: 60rem;
+  }
+  &--name {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+  }
+  &--subtext {
+    font-family: "poppins";
+    font-size: 15px;
+    font-weight: 200;
+  }
+  &--rating {
+    &--span {
+      color: goldenrod;
+    }
+    font-weight: 600;
+    color: $thm-base-color-2;
+    margin-top: -1rem;
+  }
+  &--students {
+    margin-top: -1rem;
+    &--span {
+      font-weight: 600;
+    }
+  }
+
+  &--courses {
+    margin-top: -1rem;
+    &--span {
+      font-weight: 600;
+    }
+  }
+}

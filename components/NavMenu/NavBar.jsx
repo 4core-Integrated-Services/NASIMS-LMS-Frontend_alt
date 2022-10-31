@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { AiOutlineSearch } from "react-icons/ai";
 class NavBar extends Component {
   constructor() {
     super();
@@ -77,6 +77,79 @@ class NavBar extends Component {
                     <a>Home</a>
                   </Link>
                 </li>
+                {/* //categories */}
+                <li>
+                  <Link href="/categories">
+                    <a>Categories</a>
+                  </Link>
+                  <ul className="sub-menu">
+                    <li>
+                      <Link href="/teachers">
+                        <a>Development</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/teachers">
+                        <a>Business</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/teachers">
+                        <a>Finance and accounting</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/teachers">
+                        <a>IT & software</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/teachers">
+                        <a>Office Productivity</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/teachers">
+                        <a>Personal development</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/teachers">
+                        <a>Design</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/teachers">
+                        <a>Marketing</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/teachers">
+                        <a>Lifestyle</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/teachers">
+                        <a>Photography</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/teachers">
+                        <a>Health & Fitness</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/teacher-details">
+                        <a>Music</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/become-teacher">
+                        <a>Teaching & Academics</a>
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
                 <li>
                   <Link href="/courses">
                     <a>Courses</a>
@@ -94,14 +167,36 @@ class NavBar extends Component {
                 </li>
               </ul>
             </div>
-            <div className="right-side-box">
+            <div className="right-side-box search-parent">
+              <div className="search">
+                <form action="courses/search" className="search--form">
+                  <input type="hidden" name="src" value="src" />
+                  <input
+                    type="text"
+                    name="search"
+                    autoComplete="off"
+                    placeholder="Search for anything"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    role="combobox"
+                    className="search--form--bar"
+                  />
+                  <button type="submit" className="search--form--btn">
+                    <AiOutlineSearch />
+                  </button>
+                </form>
+              </div>
               <div className="user">
-                <p className="user-name">Hi, Wisdom</p>
-                <img
-                  className="user-image"
-                  src="/assets/images/random-guy.jpg"
-                  alt="random user"
-                />
+                <Link href="/user">
+                  <p className="user-name">Hi, Wisdom</p>
+                </Link>
+                <Link href="/user">
+                  <img
+                    className="user-image"
+                    src="/assets/images/anonymous.jpeg"
+                    alt="user"
+                  />
+                </Link>
               </div>
             </div>
           </div>

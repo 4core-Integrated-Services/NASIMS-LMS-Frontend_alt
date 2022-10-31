@@ -29,10 +29,10 @@ const Meeting = () => {
                 </h2>
               </div>
               <p className="meeting-one__block-text">
-                There are many variations of passages of lorem ipsum available,
+                {`    There are many variations of passages of lorem ipsum available,
                 but the majority have suffered alteration in some form, by
                 injected humour, or randomised words which don't look even
-                slightly believable.
+                slightly believable.`}
               </p>
               <div className="meeting-one__box-wrap">
                 <div className="meeting-one__box">

@@ -1,0 +1,25 @@
+.search-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search--form {
+  margin-right: 15rem;
+  position: relative;
+  &--bar {
+    padding: 0.4rem 0.4rem;
+    width: 25rem;
+    outline: none;
+    border: none;
+    background-color: #f7fbfd;
+    color: $thm-black;
+  }
+  &--btn {
+    padding: 0.4rem 0.6rem;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 5px;
+  }
+}

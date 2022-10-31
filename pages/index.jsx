@@ -10,6 +10,7 @@ import Team from "../components/Landing/Team";
 import Meeting from "../components/Landing/Meeting";
 import CallToActionTwo from "../components/CallToAction/CallToActionTwo";
 import Blog from "../components/Landing/Blog";
+import Categories from "../components/Landing/Categories";
 
 const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ const HomePage = () => {
       <CourseCat />
       <AboutOne />
       <CourseCarousel />
+      <Categories />
       <Team />
       <Meeting />
       <CallToActionTwo />

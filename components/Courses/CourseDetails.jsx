@@ -1,10 +1,91 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import coursesData from "../data/courses";
 import { RatingIcon } from "../icons/rating";
 import ReactPlayer from "react-player";
+// import { TbLetterX } from "react-icons/tb";
+import quizData from "../data/quiz";
+import instructorObject from "../data/instructors";
+// import {
+//   Modal,
+//   Typography,
+//   Box,
+//   Divider,
+//   Button,
+//   FormControl,
+//   RadioGroup,
+//   Radio,
+//   FormControlLabel,
+// } from "@mui/material";
+
+// const style = {
+//   position: "absolute",
+//   top: "50%",
+//   left: "50%",
+//   transform: "translate(-50%, -50%)",
+//   width: 1200,
+//   height: 600,
+//   bgcolor: "background.paper",
+//   border: "2px solid #000",
+//   boxShadow: 24,
+//   p: 5,
+// };
 
 const CourseDetails = ({ courseId }) => {
   const course = coursesData.find((data) => data.id == courseId);
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+
+  const [active, setActive] = useState("");
+  const [showScore, setShowScore] = useState(false);
+  const [score, setScore] = useState(0);
+
+  const handleClose = () => {
+    setOpen(false);
+    setShowScore(false);
+    setScore(0);
+    setCurrentQuestion(0);
+  };
+
+  const handleSetActive = (sectionId) => {
+    if (active === sectionId) {
+      setActive("");
+    } else {
+      setActive(sectionId);
+    }
+  };
+
+  const modalRef = useRef();
+  function showModal() {
+    modalRef.current.classList.add("bg-active");
+  }
+
+  function closeModal() {
+    modalRef.current.classList.remove("bg-active");
+  }
+
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  function checkIsCorrect(isCorrect) {
+    if (isCorrect == true) {
+      setScore(score + 1);
+    }
+  }
+  function nextButtonClicked() {
+    const nextQuestion = currentQuestion + 1;
+    if (nextQuestion < quizData.length) {
+      setCurrentQuestion(nextQuestion);
+    } else {
+      setShowScore(true);
+    }
+  }
+  function prevButtonClicked() {
+    const prevQuestion = currentQuestion - 1;
+    if (prevQuestion >= 0) {
+      setCurrentQuestion(prevQuestion);
+    }
+  }
+
+  // const course = coursesData[0];
   return (
     <section className="course-details">
       <div className="container">
@@ -13,7 +94,10 @@ const CourseDetails = ({ courseId }) => {
             <div className="course-details__content">
               <p className="course-details__author">
                 <img src={course?.creatorImage} alt="" />
-                by <a href="#">{course?.instructor ?? "Rosaline Ene"}</a>
+                by{" "}
+                <a href={`/instructor-details/1`}>
+                  {course?.instructor ?? "Rosaline Ene"}
+                </a>
               </p>
 
               <div className="course-details__top">
@@ -42,9 +126,9 @@ const CourseDetails = ({ courseId }) => {
                   </a>
                 </div>
               </div>
-              <div className="course-one__image">
-                {course?.videoUrl != undefined ? (
-                  <ReactPlayer controls url={course?.videoUrl} />
+              <div className="course-one__image thumbnail__video">
+                {course?.thumbnailVideo != undefined ? (
+                  <ReactPlayer controls url={course?.thumbnailVideo} />
                 ) : (
                   <img src={course?.thumbnail} />
                 )}
@@ -122,107 +206,105 @@ const CourseDetails = ({ courseId }) => {
                   role="tabpanel"
                   id="curriculum"
                 >
-                  <h3 className="course-details__tab-title">
-                    Starting beginners level course
-                  </h3>
-                  <br />
-                  <p className="course-details__tab-text">
-                    Aelltes port lacus quis enim var sed efficitur turpis gilla
-                    sed sit Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry’s
-                    standard dummy text ever since.
-                  </p>
-                  <br />
-                  <ul className="course-details__curriculum-list list-unstyled">
-                    <li>
-                      <div className="course-details__curriculum-list-left">
-                        <div className="course-details__meta-icon video-icon">
-                          <i className="fas fa-play"></i>
+                  {course?.sections.map((section, index) => {
+                    return (
+                      <div
+                        className="accordion"
+                        id="accordionExample"
+                        key={section?.sectionId}
+                      >
+                        <div className="accordion-item ">
+                          <h2 className="accordion-header" id="headingOne">
+                            <button
+                              className="accordion-button bg-white text-dark"
+                              type="button"
+                              // data-bs-toggle="collapse"
+                              data-bs-target={`#collapseOne${section?.sectionId}`}
+                              aria-expanded="true"
+                              aria-controls={`collapseOne${section?.sectionId}`}
+                              onClick={() =>
+                                handleSetActive(section?.sectionId)
+                              }
+                            >
+                              {section?.sectionTitle}
+                            </button>
+                          </h2>
+                          <div
+                            id={`collapseOne${section?.sectionId}`}
+                            className={
+                              active == section?.sectionId
+                                ? "accordion-collapse collapse show"
+                                : "accordion-collapse collapse"
+                            }
+                            aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample"
+                          >
+                            <div className="accordion-body">
+                              <p className="course-details__tab-text">
+                                Aelltes port lacus quis enim var sed efficitur
+                                turpis gilla sed sit Lorem Ipsum is simply dummy
+                                text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry’s standard
+                                dummy text ever since.
+                              </p>
+                              {section?.lectures.map((lecture, index) => {
+                                return (
+                                  <ul
+                                    key={lecture?.lectureId}
+                                    className="course-details__curriculum-list list-unstyled"
+                                  >
+                                    <li>
+                                      <div className="course-details__curriculum-list-left">
+                                        <div className="course-details__meta-icon video-icon">
+                                          <i className="fas fa-play"></i>
+                                        </div>
+                                        <a href="#">{lecture?.lectureTitle}</a>{" "}
+                                        <span>Preview</span>
+                                      </div>
+                                      <div className="course-details__curriculum-list-right">
+                                        {lecture?.lectureDuration}
+                                      </div>
+                                    </li>
+                                  </ul>
+                                );
+                              })}
+                              <ul className="course-details__curriculum-list list-unstyled">
+                                <li>
+                                  <div className="course-details__curriculum-list-left">
+                                    <div className="course-details__meta-icon file-icon">
+                                      <i className="fas fa-folder"></i>
+                                    </div>
+                                    <a href="#">Resources</a>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div className="course-details__curriculum-list-left">
+                                    <div className="course-details__meta-icon quiz-icon">
+                                      <i className="fas fa-comment"></i>
+                                    </div>
+                                    <a
+                                      // onClick={handleOpen}
+                                      onClick={showModal}
+                                      style={{
+                                        cursor: "pointer",
+                                      }}
+                                      className="modal-btn"
+                                    >
+                                      Quiz
+                                    </a>
+                                  </div>
+
+                                  <div className="course-details__curriculum-list-right">
+                                    6 questions
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
                         </div>
-                        <a href="#">Introduction to Editing</a>{" "}
-                        <span>Preview</span>
                       </div>
-                      <div className="course-details__curriculum-list-right">
-                        16 minutes
-                      </div>
-                    </li>
-                    <li>
-                      <div className="course-details__curriculum-list-left">
-                        <div className="course-details__meta-icon video-icon">
-                          <i className="fas fa-play"></i>
-                        </div>
-                        <a href="#">Overview of Editing</a> <span>Preview</span>
-                      </div>
-                      <div className="course-details__curriculum-list-right">
-                        10 minutes
-                      </div>
-                    </li>
-                    <li>
-                      <div className="course-details__curriculum-list-left">
-                        <div className="course-details__meta-icon file-icon">
-                          <i className="fas fa-folder"></i>
-                        </div>
-                        <a href="#">Basic Editing Technology</a>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="course-details__curriculum-list-left">
-                        <div className="course-details__meta-icon quiz-icon">
-                          <i className="fas fa-comment"></i>
-                        </div>
-                        <a href="#">Quiz</a>
-                      </div>
-                      <div className="course-details__curriculum-list-right">
-                        6 questions
-                      </div>
-                    </li>
-                  </ul>
-                  <br />
-                  <br />
-                  <h3 className="course-details__tab-title">
-                    Intermediate Level
-                  </h3>
-                  <br />
-                  <p className="course-details__tab-text">
-                    Aelltes port lacus quis enim var sed efficitur turpis gilla
-                    sed sit Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry’s
-                    standard dummy text ever since.
-                  </p>
-                  <br />
-                  <ul className="course-details__curriculum-list list-unstyled">
-                    <li>
-                      <div className="course-details__curriculum-list-left">
-                        <div className="course-details__meta-icon video-icon">
-                          <i className="fas fa-play"></i>
-                        </div>
-                        <a href="#">Introduction to Editing</a>
-                        <span>Preview</span>
-                      </div>
-                      <div className="course-details__curriculum-list-right">
-                        16 minutes
-                      </div>
-                    </li>
-                    <li>
-                      <div className="course-details__curriculum-list-left">
-                        <div className="course-details__meta-icon file-icon">
-                          <i className="fas fa-folder"></i>
-                        </div>
-                        <a href="#">Basic Editing Technology</a>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="course-details__curriculum-list-left">
-                        <div className="course-details__meta-icon quiz-icon">
-                          <i className="fas fa-comment"></i>
-                        </div>
-                        <a href="#">Quiz</a>
-                      </div>
-                      <div className="course-details__curriculum-list-right">
-                        6 questions
-                      </div>
-                    </li>
-                  </ul>
+                    );
+                  })}
                 </div>
                 <div
                   className="tab-pane  animated fadeInUp"
@@ -399,7 +481,7 @@ const CourseDetails = ({ courseId }) => {
               <p className="course-details__price-text">Course price </p>
               <p className="course-details__price-amount">Free</p>
               <a href="#" className="thm-btn course-details__price-btn">
-                Add to Collection
+                Start Course
               </a>
             </div>
 
@@ -521,6 +603,29 @@ const CourseDetails = ({ courseId }) => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="modal-bg" ref={modalRef}>
+        <div className="modals">
+          <span onClick={closeModal} className="modals--close">
+            X
+          </span>
+          <h2>Quiz</h2>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input
+                  type="radio"
+                  aria-label="Radio button for following text input"
+                />
+              </div>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Text input with radio button"
+            />
           </div>
         </div>
       </div>

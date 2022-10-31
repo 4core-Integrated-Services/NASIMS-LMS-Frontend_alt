@@ -96,10 +96,12 @@ const InstructorDetails = ({ instructorId }) => {
             <div className="team-one__single">
               <div className="team-one__image">
                 <img
-                  src={instructor?.instructorImage ?? "/assets/images/teach1"}
+                  src={
+                    instructor?.instructorImage ?? "/assets/images/teach1.jpg"
+                  }
                   alt=""
                   style={{
-                    width: 570,
+                    width: 636,
                     height: 505,
                     backgroundPosition: "center top",
                     backgroundSize: "cover",

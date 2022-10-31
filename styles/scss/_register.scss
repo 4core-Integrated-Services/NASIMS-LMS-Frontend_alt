@@ -1,0 +1,78 @@
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  border-top: 1px solid #999;
+}
+.registerpage {
+  margin-top: 4rem;
+  margin-bottom: 20rem;
+  display: block;
+  width: 25rem;
+  padding: 1rem 4rem;
+  border-top: 1px solid #999;
+  &--heading {
+    font-size: 28px;
+    text-align: center;
+    font-weight: 600;
+  }
+  &--subheading {
+    font-size: 15px;
+    text-align: center;
+    color: #555;
+  }
+  &--input {
+    padding: 0.3rem 0.3rem;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+  }
+  &--small {
+    color: #e90202;
+  }
+  &--btn {
+    background-color: $thm-base-color;
+    color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.4rem 0.4rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: #004900;
+    }
+  }
+  &--forgot {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 0.5rem;
+    &--span {
+      &--item {
+        color: $thm-base-color;
+        font-weight: 600;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: #004900;
+        }
+      }
+    }
+  }
+  &--create {
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 0.9px;
+    color: #555;
+    &--span {
+      &--item {
+        color: $thm-base-color;
+        font-weight: 600;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: #004900;
+        }
+      }
+    }
+  }
+}

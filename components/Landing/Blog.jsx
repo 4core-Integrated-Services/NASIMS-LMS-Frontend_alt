@@ -17,7 +17,7 @@ const Blog = () => {
                   src="/assets/images/campPhoto.jpg"
                   alt=""
                   style={{
-                    width: 370,
+                    width: "100%",
                     height: 307,
                   }}
                 />
@@ -74,7 +74,7 @@ const Blog = () => {
                   src="/assets/images/education.jpg"
                   alt=""
                   style={{
-                    width: 370,
+                    width: "100%",
                     height: 307,
                   }}
                 />
@@ -131,7 +131,7 @@ const Blog = () => {
                   src="/assets/images/programming.jpg"
                   alt=""
                   style={{
-                    width: 370,
+                    width: "100%",
                     height: 307,
                   }}
                 />

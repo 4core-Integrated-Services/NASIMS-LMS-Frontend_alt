@@ -14,16 +14,21 @@ const Team = () => {
           <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
             <div className="team-one__single">
               <div className="team-one__image">
-                <img
-                  src="assets/images/teach1.jpg"
+                <div
+                  // src="assets/images/teach1.jpg"
                   alt=""
                   style={{
                     width: 206,
                     height: 206,
                     backgroundPosition: "top center",
                     backgroundSize: "cover",
+                    backgroundImage: `url("assets/images/teach1.jpg")`,
+                    overflow: "hidden",
+                    transition: "transform 0.4s ease",
+                    transform: `scale(1) translateX(55px)`,
+                    borderRadius: "50%",
                   }}
-                />
+                ></div>
               </div>
               <div className="team-one__content">
                 <h2 className="team-one__name">
@@ -53,16 +58,21 @@ const Team = () => {
           <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
             <div className="team-one__single">
               <div className="team-one__image">
-                <img
-                  src="assets/images/teach2.jpg"
+                <div
+                  // src="assets/images/teach1.jpg"
                   alt=""
                   style={{
                     width: 206,
                     height: 206,
                     backgroundPosition: "top center",
                     backgroundSize: "cover",
+                    backgroundImage: `url("assets/images/teach2.jpg")`,
+                    overflow: "hidden",
+                    transition: "transform 0.4s ease",
+                    transform: `scale(1) translateX(55px)`,
+                    borderRadius: "50%",
                   }}
-                />
+                ></div>
               </div>
               <div className="team-one__content">
                 <h2 className="team-one__name">
@@ -92,16 +102,21 @@ const Team = () => {
           <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
             <div className="team-one__single">
               <div className="team-one__image">
-                <img
-                  src="assets/images/teach3.jpg"
+                <div
+                  // src="assets/images/teach1.jpg"
                   alt=""
                   style={{
                     width: 206,
                     height: 206,
                     backgroundPosition: "top center",
                     backgroundSize: "cover",
+                    backgroundImage: `url("assets/images/teach4.jpg")`,
+                    overflow: "hidden",
+                    transition: "transform 0.4s ease",
+                    transform: `scale(1) translateX(55px)`,
+                    borderRadius: "50%",
                   }}
-                />
+                ></div>
               </div>
               <div className="team-one__content">
                 <h2 className="team-one__name">
@@ -131,16 +146,21 @@ const Team = () => {
           <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
             <div className="team-one__single">
               <div className="team-one__image">
-                <img
-                  src="assets/images/teach4.jpg"
+                <div
+                  // src="assets/images/teach1.jpg"
                   alt=""
                   style={{
                     width: 206,
                     height: 206,
                     backgroundPosition: "top center",
                     backgroundSize: "cover",
+                    backgroundImage: `url("assets/images/teach3.jpg")`,
+                    overflow: "hidden",
+                    transition: "transform 0.4s ease",
+                    transform: `scale(1) translateX(55px)`,
+                    borderRadius: "50%",
                   }}
-                />
+                ></div>
               </div>
               <div className="team-one__content">
                 <h2 className="team-one__name">

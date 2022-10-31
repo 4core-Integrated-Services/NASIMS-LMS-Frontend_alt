@@ -12,6 +12,15 @@
   &__img {
     position: relative;
     margin-bottom: 45px;
+    img {
+      background-position: top;
+      background-size: cover;
+      object-fit: cover;
+      object-position: top;
+      width: 570px;
+      height: 298px;
+      filter: brightness(80%);
+    }
 
     &:before {
       content: "";

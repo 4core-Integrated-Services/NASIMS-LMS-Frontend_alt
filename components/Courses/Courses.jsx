@@ -8,10 +8,10 @@ const Courses = () => {
     <section className="course-one course-page">
       <div className="container">
         <div
-          className="row row-cols-3 row-cols-sm-1 row-cols-md-4 row-cols-lg-4 gx-lg-4 gy-4"
-          style={{
-            gap: "15px",
-          }}
+          className="row row-cols-5 row-cols-sm-1 row-cols-md-4 row-cols-lg-4 gx-lg-4 gy-4"
+          // style={{
+          //   gap: "10px",
+          // }}
         >
           {
             /**
@@ -19,7 +19,7 @@ const Courses = () => {
              */
             coursesData.map((courses) => {
               return (
-                <div className="course-one__single">
+                <div key={courses.id} className="course-one__single">
                   <div className="course-one__image">
                     <img
                       src={courses.thumbnail}
@@ -27,7 +27,6 @@ const Courses = () => {
                       width="272"
                       height="200"
                     />
-                    <i className="far fa-heart"></i>
                   </div>
                   <div className="course-one__content">
                     <div
@@ -75,14 +74,18 @@ const Courses = () => {
                       </span>
                     </div>
                     <div className="course-one__meta">
-                      <a href="/course-details">
-                        <i className="far fa-clock"></i> {courses.duration}{" "}
-                        Hours
-                      </a>
-                      <a href="/course-details">
-                        <i className="far fa-folder-open"></i>{" "}
-                        {courses.lectures} Lectures
-                      </a>
+                      <Link href="/course-details" passHref>
+                        <a>
+                          <i className="far fa-clock"></i>{" "}
+                          {courses.totalDuration}{" "}
+                        </a>
+                      </Link>
+                      <Link href="/course-details" passHref>
+                        <a>
+                          <i className="far fa-folder-open"></i>{" "}
+                          {courses.totalLectureCount} Lectures
+                        </a>
+                      </Link>
                     </div>
                     <Link href={`/course-details/${courses.id}`}>
                       <a className="course-one__link">See Preview</a>

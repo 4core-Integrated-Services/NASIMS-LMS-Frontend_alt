@@ -1,19 +1,24 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const CallToActionFour = () => {
   return (
     <section className="cta-four">
-      <img
-        src="/assets/images/circle-stripe-1.png"
-        className="cta-four__stripe"
-        alt=""
-      />
-      <img
-        src="assets/images/line-stripe-1.png"
-        className="cta-four__line"
-        alt=""
+      {/* <Image
+        src={"/assets/images/circle-stripe-1.png"}
+        className={"cta-four__stripe"}
+        alt={"s"}
+        width={108.85}
+        height={68.78}
+      /> */}
+      <Image
+        src={"/assets/images/line-stripe-1.png"}
+        className={"cta-four__line"}
+        alt="s"
+        width={108.85}
+        height={68.78}
       />
       <div className="container text-center">
         <div className="block-title">

@@ -1,7 +1,7 @@
-// import "../node_modules/react-modal-video/scss/modal-video.scss";
 import "../styles/scss/style.scss";
 import "../styles/scss/responsive.scss";
-import "../styles/plugins/bootstrap/bootstrap.min.css";
+
+import "bootstrap/dist/css/bootstrap.css";
 import "../styles/plugins/fontawesome-free-5.11.2-web/css/all.min.css";
 import "../styles/css/animate.min.css";
 import "../styles/css/owl.carousel.min.css";

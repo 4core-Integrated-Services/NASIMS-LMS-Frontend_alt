@@ -10,7 +10,7 @@ const CourseCarousel = () => {
     loop: true,
     speed: 1000,
     autoplay: {
-      delay: 3000,
+      delay: 4000,
       disableOnInteraction: false,
     },
     pagination: {
@@ -96,12 +96,11 @@ const CourseCarousel = () => {
                               </a>
                             </div>
                             <h2 className="course-one__title">
-                              <a
-                                href="/course-details"
-                                className="course-one__title--link"
-                              >
-                                {courses.title}
-                              </a>
+                              <Link href="/course-details" passhref>
+                                <a className="course-one__title--link">
+                                  {courses.title}
+                                </a>
+                              </Link>
                             </h2>
                             <div className="course-one__stars">
                               <span className="course-one__stars-wrap">
@@ -118,17 +117,23 @@ const CourseCarousel = () => {
                               </span>
                             </div>
                             <div className="course-one__meta">
-                              <a href="/course-details">
-                                <i className="far fa-clock"></i>{" "}
-                                {courses.duration} Hours
-                              </a>
-                              <a href="/course-details">
-                                <i className="far fa-folder-open"></i>{" "}
-                                {courses.lectures} Lectures
-                              </a>
+                              <Link href="/course-details" passhref>
+                                <a>
+                                  <i className="far fa-clock"></i>{" "}
+                                  {courses.totalDuration}
+                                </a>
+                              </Link>
+                              <Link href="/course-details" passhref>
+                                <a>
+                                  <i className="far fa-folder-open"></i>{" "}
+                                  {courses.totalLectureCount} Lectures
+                                </a>
+                              </Link>
                             </div>
                             <Link href={`/course-details/${courses.id}`}>
-                              <a className="course-one__link">See Preview</a>
+                              <a className="course-one__link" passhref>
+                                See Preview
+                              </a>
                             </Link>
                           </div>
                         </div>

@@ -1,0 +1,88 @@
+.courseslist {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #999;
+  padding: 15px 3px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+  //   flex-direction: column;
+
+  &--box {
+    flex: 20%;
+
+    &--image {
+      background-position: top center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      object-fit: cover;
+      object-position: top;
+      width: 250px;
+      height: 200px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      *:hover {
+        filter: brightness(60%);
+      }
+    }
+  }
+
+  &--content {
+    flex: 80%;
+
+    padding: 10px 2rem;
+    &--heading {
+      font-size: 27px;
+      text-transform: capitalize;
+      font-weight: 500;
+    }
+    &--description {
+      font-size: 17px;
+      color: #444;
+    }
+
+    &--def {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: -0.5rem;
+      &--instructor {
+        text-transform: capitalize;
+        font-size: 16px;
+        color: #777;
+        font-family: "poppins";
+      }
+      &--students {
+        text-transform: capitalize;
+        font-size: 16px;
+        color: #777;
+        font-family: "poppins";
+      }
+    }
+    &--stars {
+      margin-top: -0.9rem;
+      display: flex;
+      align-items: center;
+      &--number {
+        color: #965000;
+        font-size: 20px;
+        font-weight: 600;
+        margin-right: 0.5rem;
+      }
+      &--star {
+        color: #af9500;
+        margin-top: -0.3rem;
+      }
+    }
+    &--spans {
+      color: #666;
+    }
+  }
+}
+
+.paginationCLASS {
+  margin: 4rem 0;
+}

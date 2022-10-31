@@ -1,0 +1,24 @@
+.parent--grid {
+  margin-bottom: 3rem;
+  margin-top: -17rem;
+  &:hover {
+    background-color: rgba(85, 85, 85, 0.164);
+  }
+}
+.grids-items {
+  padding: 1.5rem 1.5rem;
+  border: 1px solid #555;
+  gap: 30px;
+  margin-right: 10px;
+  margin-left: 17px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(85, 85, 85, 0.164);
+  }
+
+  &--item {
+    color: #555;
+    font-family: "poppins";
+    font-weight: 600;
+  }
+}
