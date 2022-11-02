@@ -4,7 +4,7 @@ import coursesData from "../data/courses";
 import { RatingIcon } from "../icons/rating";
 import Link from "next/link";
 
-const CategoriesCarousel = () => {
+const CatSlider = () => {
   const params = {
     slidesPerView: 5,
     loop: true,
@@ -147,4 +147,4 @@ const CategoriesCarousel = () => {
     </>
   );
 };
-export default CategoriesCarousel;
+export default CatSlider;

@@ -1,6 +1,6 @@
 import React from "react";
 import AllCategorieCourses from "./AllCategorieCourses";
-import CategoriesCarousel from "./categoriesCarousel";
+import CatSlider from "./CatSlider";
 import CategoriesGrid from "./CategoriesGrid";
 import CategoriesSubSection from "./CategoriesSubSection";
 import Pagination from "./Pagination";
@@ -14,7 +14,7 @@ function MainHeading() {
           <CategoriesSubSection />
         </div>
         <div className="col col-11">
-          <CategoriesCarousel />
+          <CatSlider />
         </div>
       </div>
 
