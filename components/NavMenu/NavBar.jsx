@@ -160,11 +160,11 @@ class NavBar extends Component {
                     <a>Instructors</a>
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/news">
                     <a>News</a>
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div className="right-side-box search-parent">

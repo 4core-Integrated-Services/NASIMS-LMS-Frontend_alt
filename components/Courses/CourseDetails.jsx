@@ -62,15 +62,19 @@ const CourseDetails = ({ courseId }) => {
 
   function closeModal() {
     modalRef.current.classList.remove("bg-active");
+    setShowScore(false);
+    setScore(0);
+    setCurrentQuestion(0);
   }
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
+
   function checkIsCorrect(isCorrect) {
     if (isCorrect == true) {
       setScore(score + 1);
     }
   }
-  function nextButtonClicked() {
+  function nextButtonClicked(isCorrect) {
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < quizData.length) {
       setCurrentQuestion(nextQuestion);
@@ -611,21 +615,41 @@ const CourseDetails = ({ courseId }) => {
           <span onClick={closeModal} className="modals--close">
             X
           </span>
-          <h2>Quiz</h2>
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <input
-                  type="radio"
-                  aria-label="Radio button for following text input"
-                />
+          <h3 className="modals--heading">Test</h3>
+          <div>
+            {showScore ? (
+              <div className="modals--alt">
+                You scored {score} out of {quizData.length}
               </div>
-            </div>
-            <input
-              type="text"
-              class="form-control"
-              aria-label="Text input with radio button"
-            />
+            ) : (
+              <form className="modals--form">
+                <span className="modals--counter">
+                  Question {currentQuestion + 1} of {quizData.length}
+                </span>
+                <h3 className="modals--questionHeading">
+                  {quizData[currentQuestion].questionText}
+                </h3>
+                {quizData[currentQuestion].answerOptions.map(
+                  (answerOption, index) => {
+                    return (
+                      // <div key={index}>
+                      <div className="form-check modals--grouper" key={index}>
+                        <label
+                          className="form-check-label modals--grouper--options"
+                          onClick={() => {
+                            checkIsCorrect(answerOption.isCorrect);
+                            nextButtonClicked();
+                          }}
+                        >
+                          {answerOption.answerText}
+                        </label>
+                      </div>
+                      // </div>
+                    );
+                  }
+                )}
+              </form>
+            )}
           </div>
         </div>
       </div>

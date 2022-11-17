@@ -37,7 +37,7 @@ const Meeting = () => {
               <div className="meeting-one__box-wrap">
                 <div className="meeting-one__box">
                   <div className="meeting-one__bubble">
-                    Hello. I’m here to learn chemistry
+                    Hello. I’m here to learn web design
                   </div>
                   <img
                     src="/assets/images/fineBlackGirl.jpg"
