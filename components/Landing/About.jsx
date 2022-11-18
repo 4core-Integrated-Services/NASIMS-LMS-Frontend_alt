@@ -19,7 +19,9 @@ class About extends Component {
 
   render() {
     return (
-      <section className="about-one ">
+      <section className="about-one " style={{
+        transform: "scale(.9)"
+      }}>
         <img
           src="assets/images/circle-stripe.png"
           className="about-one__circle"
@@ -47,8 +49,10 @@ class About extends Component {
                     backgroundPosition: "top center",
                     backgroundSize: "cover",
                     overflow: "hidden",
-                    width: "590px",
-                    height: "298px",
+                    width: "540px",
+                    height: "260px",
+                    filter: "brightness(80%)",
+                    backgroundBlendMode: "darken"
                   }}
                 ></div>
               </div>
@@ -59,8 +63,10 @@ class About extends Component {
                     backgroundPosition: "top center",
                     backgroundSize: "cover",
                     overflow: "hidden",
-                    width: "590px",
-                    height: "298px",
+                    width: "540px",
+                    height: "260px",
+                    filter: "brightness(80%)",
+                    backgroundBlendMode: "darken"
                   }}
                 ></div>
               </div>
@@ -96,7 +102,12 @@ class About extends Component {
             vel velit auctor aliquetn auci elit cons.`}
           </p>
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-            <a href="#" className="thm-btn about-one__btn">
+            <a href="#" className="thm-btn about-one__btn" style={
+              {
+                padding:  ".7rem .5rem",
+                marginTop: "-2rem",
+              }
+            }>
               Start Learning Now
             </a>
           </motion.div>

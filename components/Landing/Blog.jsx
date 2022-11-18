@@ -2,7 +2,10 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <section className="blog-one  blog-one__home-two">
+    <section className="blog-one  blog-one__home-two" style={{ 
+      marginTop: "-15rem",
+      transform: "scale(.88)",
+    }}>
       <div className="container">
         <div className="block-title text-center">
           <h2 className="block-title__title">

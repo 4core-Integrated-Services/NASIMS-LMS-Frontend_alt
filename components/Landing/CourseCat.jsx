@@ -8,6 +8,8 @@ import { GiPhotoCamera } from "react-icons/gi";
 import { GiReceiveMoney } from "react-icons/gi";
 import { IoFitnessOutline } from "react-icons/io5";
 
+
+
 const CourseCat = () => {
   const params = {
     slidesPerView: 5,
@@ -37,16 +39,24 @@ const CourseCat = () => {
   };
 
   return (
-    <section className="course-category-two">
+    <section className="course-category-two" style={{ 
+      transform: "scale(.9)"
+    }}>
       <div className="container text-center">
         <h1
+          // style={{
+          //   fontSize: "20px",
+          //   marginRight: "68rem",
+          //   width: "5rem",
+          //   textAlign: "right",
+          //   fontFamily: "Raleway",
+          //   marginBottom: "3rem",
+          //   fontWeight: "600",
+          // }}
           style={{
-            fontSize: "30px",
-            marginRight: "68rem",
-            textAlign: "right",
-            fontFamily: "Raleway",
-            marginBottom: "3rem",
-            fontWeight: "600",
+            fontSize: "25px",
+            marginBottom: "1rem",
+            textAlign: "start",
           }}
         >
           Career Paths

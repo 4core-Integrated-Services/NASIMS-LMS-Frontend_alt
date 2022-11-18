@@ -1,0 +1,49 @@
+.banner-bg
+    width: 100%
+    // background-color: red
+    height: 40rem
+    margin-top: .7rem
+    position: relative
+    &__image
+        background-image: url(/assets/images/banner-3.jpg)
+        background-size: cover
+        background-position: top
+        width:100%
+        height: 100%
+        filter: brightness(60%)
+        background-blend-mode: darken
+
+
+    &__content
+       display: block
+       position: absolute
+       top: 40%
+       left: 50%
+       transform: translate(-50% , -50%)
+       text-align: center
+       color: #fff
+       &--sub
+        font-size: 28px
+        text-decoration: underline
+        font-style: oblique
+
+       &--heading
+        font-size: 4rem
+        font-weight: 600
+        font-family: "poppins"
+        margin-bottom: 3rem
+
+       &--link
+        color: #fff
+        text-decoration: none
+        background-color: $thm-base-color
+        padding: 1rem 2rem
+        font-weight: 600
+        transition: all .3s ease
+        &:hover
+            background-color:$thm-black
+            color: #fff
+
+
+       
+       

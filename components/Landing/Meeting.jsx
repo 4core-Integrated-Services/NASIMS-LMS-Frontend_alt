@@ -4,7 +4,9 @@ import lottieImage from "../../public/assets/images/myLottie.json";
 
 const Meeting = () => {
   return (
-    <section className="meeting-one">
+    <section className="meeting-one" style={{
+      transform: "scale(.9)",
+    }}>
       <div className="container">
         <div className="row">
           <div className="col-lg-6">

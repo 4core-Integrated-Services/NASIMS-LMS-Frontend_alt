@@ -65,7 +65,9 @@ const CourseCarousel = () => {
                  */
                 coursesData.map((courses, index) => {
                   return (
-                    <div key={courses.id}>
+                    <div key={courses.id} style={{
+                      transform: "scale(.94)"
+                    }}>
                       <div className="item">
                         <div className="course-one__single color-1">
                           <div className="course-one__image">

@@ -5,31 +5,6 @@ import ReactPlayer from "react-player";
 // import { TbLetterX } from "react-icons/tb";
 import quizData from "../data/quiz";
 import instructorObject from "../data/instructors";
-// import {
-//   Modal,
-//   Typography,
-//   Box,
-//   Divider,
-//   Button,
-//   FormControl,
-//   RadioGroup,
-//   Radio,
-//   FormControlLabel,
-// } from "@mui/material";
-
-// const style = {
-//   position: "absolute",
-//   top: "50%",
-//   left: "50%",
-//   transform: "translate(-50%, -50%)",
-//   width: 1200,
-//   height: 600,
-//   bgcolor: "background.paper",
-//   border: "2px solid #000",
-//   boxShadow: 24,
-//   p: 5,
-// };
-
 const CourseDetails = ({ courseId }) => {
   const course = coursesData.find((data) => data.id == courseId);
 

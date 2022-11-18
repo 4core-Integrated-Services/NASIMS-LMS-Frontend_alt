@@ -2,7 +2,9 @@ import React from "react";
 
 const Team = () => {
   return (
-    <section className="team-one team-one__become-teacher">
+    <section className="team-one team-one__become-teacher" style={{ 
+      transform: "scale(.9)"
+    }}>
       <div className="container">
         <div className="block-title text-center">
           <h2 className="block-title__title">
@@ -15,7 +17,7 @@ const Team = () => {
             <div className="team-one__single">
               <div className="team-one__image">
                 <div
-                  // src="assets/images/teach1.jpg"
+                  src="assets/images/teach1.jpg"
                   alt=""
                   style={{
                     width: 206,
@@ -25,8 +27,9 @@ const Team = () => {
                     backgroundImage: `url("assets/images/teach1.jpg")`,
                     overflow: "hidden",
                     transition: "transform 0.4s ease",
-                    transform: `scale(1) translateX(55px)`,
+                    transform: `translateX(30px)`,
                     borderRadius: "50%",
+                   
                   }}
                 ></div>
               </div>
@@ -69,7 +72,7 @@ const Team = () => {
                     backgroundImage: `url("assets/images/teach2.jpg")`,
                     overflow: "hidden",
                     transition: "transform 0.4s ease",
-                    transform: `scale(1) translateX(55px)`,
+                    transform: `translateX(30px)`,
                     borderRadius: "50%",
                   }}
                 ></div>
@@ -113,7 +116,7 @@ const Team = () => {
                     backgroundImage: `url("assets/images/teach4.jpg")`,
                     overflow: "hidden",
                     transition: "transform 0.4s ease",
-                    transform: `scale(1) translateX(55px)`,
+                    transform: `translateX(30px)`,
                     borderRadius: "50%",
                   }}
                 ></div>
@@ -157,7 +160,7 @@ const Team = () => {
                     backgroundImage: `url("assets/images/teach3.jpg")`,
                     overflow: "hidden",
                     transition: "transform 0.4s ease",
-                    transform: `scale(1) translateX(55px)`,
+                    transform: `translateX(30px)`,
                     borderRadius: "50%",
                   }}
                 ></div>

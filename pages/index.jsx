@@ -23,7 +23,7 @@ const HomePage = () => {
       <Categories />
       <Team />
       <Meeting />
-      <CallToActionTwo />
+      {/* <CallToActionTwo /> */}
       <Blog />
       <Footer />
     </Layout>

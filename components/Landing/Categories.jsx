@@ -3,7 +3,9 @@ import Link from "next/link";
 
 function Categories() {
   return (
-    <div className="parent">
+    <div className="parent" style={{
+      transform: "scale(.9)"
+    }}>
       <div className="container">
         <h1 className="heading">Featured topics by category</h1>
         <div className="categoriesflex">

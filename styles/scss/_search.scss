@@ -7,7 +7,7 @@
   margin-right: 15rem;
   position: relative;
   &--bar {
-    padding: 0.4rem 0.4rem;
+    padding: 0.6rem 0.9rem;
     width: 25rem;
     outline: none;
     border: none;
@@ -15,11 +15,13 @@
     color: $thm-black;
   }
   &--btn {
-    padding: 0.4rem 0.6rem;
+    padding: 0.6rem 0.9rem;
     border: none;
     background-color: transparent;
     position: absolute;
-    top: 0;
-    right: 5px;
+    top: -7px;
+    right: 7px;
+    font-size: 28px;
+    color: #333
   }
 }

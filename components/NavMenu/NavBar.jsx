@@ -57,10 +57,11 @@ class NavBar extends Component {
                     src="/assets/images/N-Power-Logo-removebg.png"
                     className="main-logo"
                     style={{
-                      width: 80,
+                      width: 88,
                       height: 80,
                       backgroundPosition: "center",
                       backgroundSize: "cover",
+                      marginTop: "1rem"
                     }}
                     alt="Awesome Image"
                   />
@@ -72,11 +73,11 @@ class NavBar extends Component {
             </div>
             <div className="main-navigation">
               <ul className=" navigation-box">
-                <li className="current">
+                {/* <li className="current">
                   <Link href="/">
                     <a>Home</a>
                   </Link>
-                </li>
+                </li> */}
                 {/* //categories */}
                 <li>
                   <Link href="/categories">
@@ -150,11 +151,11 @@ class NavBar extends Component {
                     </li>
                   </ul>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/courses">
                     <a>Courses</a>
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/instructor">
                     <a>Instructors</a>
