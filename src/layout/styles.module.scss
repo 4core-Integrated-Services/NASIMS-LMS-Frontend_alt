@@ -1,0 +1,6 @@
+.pageWrapper {
+  padding-top: 68px;
+  @media (max-width: 800px) {
+    padding-top: 100px;
+  }
+}

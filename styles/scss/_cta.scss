@@ -58,6 +58,12 @@
 }
 
 .cta-two {
+  width: 100%;
+  max-width: 100%;
+  height: fit-content;
+  min-height: fit-content;
+  overflow: hidden;
+
   .container-fluid {
     padding: 0;
   }
@@ -69,15 +75,14 @@
   }
 
   &__single {
-    padding-left: 135px;
     display: flex;
     align-items: flex-start;
-    padding-top: 116px;
-    padding-bottom: 116px;
+    padding: 10rem 5% 5rem 5%;
+    box-sizing: border-box;
   }
 
   &__icon {
-    margin-right: 60px;
+    margin-right: 2rem;
 
     span {
       background-color: #fff;
