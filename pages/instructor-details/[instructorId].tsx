@@ -24,9 +24,7 @@ const InstructorPage: NextPageWithLayout = () => {
   }, [instructorId]);
 
   return (
-    <PageWrapper
-      title={`${instructor()?.instructorName ?? ""} Instructor Nasims Learning`}
-    >
+    <PageWrapper title={`Instructor Nasims Learning`}>
       <PageHeader title="Instructor Details" />
       <InstructorDetails instructorId={instructorId} />
     </PageWrapper>
