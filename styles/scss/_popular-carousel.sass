@@ -1,0 +1,122 @@
+.heading--popular
+    display: block
+    margin: 0 auto
+    text-align: center
+    font-size: 60px
+    width: 40%
+    font-weight: 600
+    margin-top: 17rem
+.popular
+    width: 100%
+    background-image: linear-gradient(to right bottom , #00226db6 , #044141ab), url('/assets/images/patter-1-1.jpg')
+    // background: #f1f1f1
+    background-position: top
+    background-size: cover
+    // filter: brightness(70%)
+    margin: 2rem 0
+    margin-bottom: 11rem
+    padding: 3rem 0
+    &__item
+        margin: 0 auto
+        background: #fbfeff
+        width: 16rem
+        &--image
+            width: 100%
+            height: 11rem
+               
+            &__img
+                background-position: top
+                background-size: cover
+                width: 100%
+                height: 100%
+
+        &--content
+            padding-bottom: 1rem
+
+            &__link
+                display: block
+                margin: 0 auto
+                text-align: center
+                background-color: $thm-base-color
+                width: 90%
+                padding: .3rem .7rem
+                transition: all .3s ease-in-out
+                &:hover
+                    background-color: $thm-black
+                &--anchor
+                    color: #fff
+                    text-decoration: none
+                    font-weight: 400
+                    &:hover
+                        color: #fff
+            &__heading
+                font-size: 14px
+                padding: 0 1rem
+                text-transform: capitalize
+                font-weight: 600
+                color: #555
+    
+            &__time
+                display: flex
+                justify-content: space-between
+                margin: .3rem 1rem
+                &--lectures
+                    font-size: 12px
+                    font-family: "poppins"
+                    color: #444
+                    // letter-spacing: 1.01px
+                    &--icon
+                        color: $thm-base-color
+                        font-size: 15px
+                        padding-right: .2rem
+
+                &--duration
+                    color: #777
+                    font-size: 12px 
+                    font-family: "poppins"
+                &--icon
+                    color: $thm-base-color
+                    font-size: 15px
+                    padding-right: .2rem        
+
+            &__rating
+                display: flex
+                justify-content: space-between
+                border-bottom: 1px solid #ccc
+                // align-items: center
+                margin: 0 1rem     
+                &--students
+                    position: relative
+                 
+                    &--number
+                        color: $thm-base-color
+                        font-family: monospace
+                        font-weight: 500
+                        font-size: 12px
+                        
+                    &--icon
+                        font-size: 17px
+
+                &--icon
+                    color: goldenrod  
+            &__instructor
+                display: flex
+                align-items: center
+                margin: .5rem 1rem
+                &--image
+                    width: 2rem
+                    height: 2rem
+                    background-position: top
+                    background-size: cover
+                    border-radius: 50%
+                &--name
+                    margin: 0 .5rem    
+                    font-size: 12px
+                    text-transform: capitalize
+                    &_span
+                        color: $thm-base-color
+                        font-weight: 600
+                        letter-spacing: 1.04
+                        text-decoration: underline
+
+     

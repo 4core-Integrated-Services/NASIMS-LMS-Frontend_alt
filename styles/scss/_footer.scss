@@ -40,15 +40,15 @@
 
     position: relative;
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100000px;
-      height: 100%;
-      background-color: #071016;
-    }
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   left: 0;
+    //   top: 0;
+    //   width: 100000px;
+    //   height: 100%;
+    //   background-color: #071016;
+    // }
 
     a {
       color: #94a3ac;
@@ -128,15 +128,15 @@
   &__about {
     position: relative;
 
-    &::before {
-      content: "";
-      width: 100000px;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: -60px;
-      background-color: #071016;
-    }
+    // &::before {
+    //   content: "";
+    //   width: 100000px;
+    //   height: 100%;
+    //   position: absolute;
+    //   top: 0;
+    //   left: -60px;
+    //   background-color: #071016;
+    // }
 
     * {
       position: relative;

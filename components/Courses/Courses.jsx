@@ -64,7 +64,7 @@ const Courses = () => {
                         {"a"
                           .repeat(courses.rating ?? 1)
                           .split("a")
-                          .slice(0, courses.rating ?? 0)  
+                          .slice(0, courses.rating ?? 0)
                           .map((_, index) => {
                             return <RatingIcon key={index} />;
                           })}

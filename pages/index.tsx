@@ -11,18 +11,28 @@ import Meeting from "../components/Landing/Meeting";
 import CallToActionTwo from "../components/CallToAction/CallToActionTwo";
 import Blog from "../components/Landing/Blog";
 import Categories from "../components/Landing/Categories";
+import BestInstructor from "../components/Landing/BestInstructors";
+import ExpertInstructors from "../components/Landing/ExpertInstructors";
+import BecomeInstructorSection from "../components/Landing/BecomeInstructorSection";
+import LottieNews from "../components/Landing/LottieNews";
+import PopularCarousel from "../components/Landing/PopularCarousel";
 
 const HomePage: NextPageWithLayout = () => {
   return (
     <PageWrapper title={"Nasims Learning"}>
       <Banner />
       <CourseCat />
-      <About />
+      {/* <About /> */}
+      <ExpertInstructors />
+      {/* <PopularCarousel /> */}
       <CourseCarousel />
       <Categories />
-      <Team />
-      <Meeting />
-      <CallToActionTwo />
+      <BestInstructor />
+      {/* <Team /> */}
+      {/* <Meeting /> */}
+      <LottieNews />
+      <BecomeInstructorSection />
+      {/* <CallToActionTwo /> */}
       <Blog />
     </PageWrapper>
   );

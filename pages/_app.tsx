@@ -1,15 +1,15 @@
-import '../styles/scss/style.scss';
-import '../styles/scss/responsive.scss';
+import "../styles/scss/style.scss";
+import "../styles/scss/responsive.scss";
 
-import 'bootstrap/dist/css/bootstrap.css';
-import '../styles/plugins/fontawesome-free-5.11.2-web/css/all.min.css';
-import '../styles/css/animate.min.css';
-import '../styles/css/owl.carousel.min.css';
-import '../styles/css/magnific-popup.css';
-import 'swiper/css/swiper.css';
-import { ReactElement, ReactNode } from 'react';
-import { AppProps } from 'next/app';
-import { NextPage } from 'next';
+import "bootstrap/dist/css/bootstrap.css";
+import "../styles/plugins/fontawesome-free-5.11.2-web/css/all.min.css";
+import "../styles/css/animate.min.css";
+import "../styles/css/owl.carousel.min.css";
+import "../styles/css/magnific-popup.css";
+// import 'swiper/css/swiper.css';
+import { ReactElement, ReactNode } from "react";
+import { AppProps } from "next/app";
+import { NextPage } from "next";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;

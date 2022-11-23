@@ -1,6 +1,7 @@
-import React, { FC, ReactElement } from 'react';
-import { AppHeader } from '../components';
-import AppFooter from '../components/footer';
+import React, { FC, ReactElement } from "react";
+// import { AppHeader } from '../components';
+import AppFooter from "../components/footer";
+import Navbar from "../../components/NavMenu/NavBar";
 
 interface HomeLayoutProps {
   children: ReactElement<any, any>;
@@ -9,7 +10,7 @@ interface HomeLayoutProps {
 export const HomeLayout: FC<HomeLayoutProps> = ({ children }) => {
   return (
     <>
-      <AppHeader />
+      <Navbar />
       {children}
       <AppFooter />
     </>

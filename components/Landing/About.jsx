@@ -1,14 +1,15 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import { motion } from "framer-motion";
 const About = () => {
-  this.state = {
-    startCounter: false,
-  };
-  onVisibilityChange = (isVisible) => {
+  // this.state = {
+  //   startCounter: false,
+  // };
+  const [startCounter, setStartCounter] = useState(false);
+  const onVisibilityChange = (isVisible) => {
     if (isVisible) {
-      this.setState({ startCounter: true });
+      setStartCounter(true);
     }
   };
   return (
@@ -70,11 +71,11 @@ const About = () => {
           <div className="about-one__review">
             <p className="about-one__review-count counter">
               <VisibilitySensor
-                onChange={this.onVisibilityChange}
+                onChange={onVisibilityChange}
                 offset={{ top: 10 }}
                 delayedCall
               >
-                <CountUp end={this.state.startCounter ? 20000 : 0} />
+                <CountUp end={startCounter ? 20000 : 0} />
               </VisibilitySensor>
             </p>
             <div className="about-one__review-stars">

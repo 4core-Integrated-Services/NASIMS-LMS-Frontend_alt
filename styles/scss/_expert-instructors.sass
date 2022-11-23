@@ -1,0 +1,83 @@
+.expert
+    margin-top: 13rem
+    position: relative
+    &--heading
+        // width: 45%
+        margin: 0 auto
+        font-size: 75px
+        word-wrap: break-word
+        font-weight: 600
+        text-align: center
+
+
+    &--images
+        display: flex
+        align-items: center
+        justify-content: space-around
+        margin-top: 4rem
+       
+
+        &__count
+            background: #f1f1f1
+            padding: 2rem 6rem
+            position: absolute
+            top: 55%
+            transform: translateY(-40%)
+            z-index: 2000
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            &--number
+                font-size: 23px
+                font-weight: 400
+                text-align: center
+                font-family: monospace
+
+            &--icon
+                color: $thm-base-color
+                // font-size: 4rem
+
+            &--text
+                font-size: 1.3rem    
+                letter-spacing: 1.1px
+
+        &__image
+
+           
+            &--1
+                background-image: url("/assets/images/teacher-1.jpg")  
+                background-position: top center
+                background-size: cover
+                width:  33rem
+                height: 17rem
+                filter: brightness(80%)
+            &--2
+                background-image: url("/assets/images/teacher-2.jpg")  
+                background-position: top center
+                background-size: cover
+                width:  33rem
+                height: 17rem  
+                filter: brightness(70%)
+
+    &--content
+        width: 60%
+        margin: 2rem auto
+        &__text
+            text-align: center  
+            color: #777
+
+        &__link
+            color: #fff
+            background: $thm-base-color
+            text-decoration: none
+            display: block
+            margin: 0 auto
+            width: 13rem   
+            padding: 1rem 1rem
+            text-align: center
+            transition: .3rem all ease-in-out
+            &:hover
+                text-decoration: none
+                color: #fff
+                background: $thm-black

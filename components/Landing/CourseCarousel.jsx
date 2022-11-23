@@ -65,9 +65,12 @@ const CourseCarousel = () => {
                  */
                 coursesData.map((courses, index) => {
                   return (
-                    <div key={courses.id} style={{
-                      transform: "scale(.94)"
-                    }}>
+                    <div
+                      key={courses.id}
+                      style={{
+                        transform: "scale(.94)",
+                      }}
+                    >
                       <div className="item">
                         <div className="course-one__single color-1">
                           <div className="course-one__image">
@@ -98,7 +101,7 @@ const CourseCarousel = () => {
                               </a>
                             </div>
                             <h2 className="course-one__title">
-                              <Link href="/course-details" passhref>
+                              <Link href="/course-details" passHref>
                                 <a className="course-one__title--link">
                                   {courses.title}
                                 </a>
@@ -119,13 +122,13 @@ const CourseCarousel = () => {
                               </span>
                             </div>
                             <div className="course-one__meta">
-                              <Link href="/course-details" passhref>
+                              <Link href="/course-details" passHref>
                                 <a>
                                   <i className="far fa-clock"></i>{" "}
                                   {courses.totalDuration}
                                 </a>
                               </Link>
-                              <Link href="/course-details" passhref>
+                              <Link href="/course-details" passHref>
                                 <a>
                                   <i className="far fa-folder-open"></i>{" "}
                                   {courses.totalLectureCount} Lectures
@@ -133,7 +136,7 @@ const CourseCarousel = () => {
                               </Link>
                             </div>
                             <Link href={`/course-details/${courses.id}`}>
-                              <a className="course-one__link" passhref>
+                              <a className="course-one__link" passHref>
                                 See Preview
                               </a>
                             </Link>

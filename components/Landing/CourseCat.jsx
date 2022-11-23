@@ -8,8 +8,6 @@ import { GiPhotoCamera } from "react-icons/gi";
 import { GiReceiveMoney } from "react-icons/gi";
 import { IoFitnessOutline } from "react-icons/io5";
 
-
-
 const CourseCat = () => {
   const params = {
     slidesPerView: 5,
@@ -39,9 +37,12 @@ const CourseCat = () => {
   };
 
   return (
-    <section className="course-category-two" style={{ 
-      transform: "scale(.9)"
-    }}>
+    <section
+      className="course-category-two"
+      style={{
+        transform: "scale(.9)",
+      }}
+    >
       <div className="container text-center">
         <h1
           // style={{

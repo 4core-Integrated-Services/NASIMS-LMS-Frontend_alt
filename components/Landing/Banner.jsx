@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link"
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const Banner = () => {
@@ -42,9 +42,11 @@ const Banner = () => {
       <div className="banner-bg__image"></div>
       <div className="banner-bg__content">
         <h3 className="banner-bg__content--sub">High Quality courses </h3>
-        <h1 className="banner-bg__content--heading">Unlock the power of learning</h1>
+        <h1 className="banner-bg__content--heading">
+          Unlock the power of learning
+        </h1>
         <Link href="/courses" passHref>
-        <a className="banner-bg__content--link">Get Started</a>
+          <a className="banner-bg__content--link">Get Started</a>
         </Link>
       </div>
     </div>
