@@ -20,10 +20,10 @@ export default function LottieNews() {
             Our latest news and articles
           </h1>
           <p className="lottienews--right__text">
-            There are many variations of passages of lorem ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don't look even slightly
-            believable.
+            {`  There are many variations of passages of lorem ipsum available, but
+          the majority have suffered alteration in some form, by injected
+          humour, or randomised words which don't look even slightly
+          believable.`}
           </p>
 
           <div className="lottienews--right__content">

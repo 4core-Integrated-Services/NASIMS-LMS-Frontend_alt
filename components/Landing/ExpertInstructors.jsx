@@ -45,10 +45,10 @@ export default function ExpertInstructors() {
       </div>
       <div className="expert--content">
         <p className="expert--content__text">
-          There are many variations of passages of lorem ipsum available, but
+          {`There are many variations of passages of lorem ipsum available, but
           the majority have suffered alteration in some form, by injected humour
           words which don't look even slightly believable. Lorem Ipsn gravida
-          nibh vel velit auctor aliquetn auci elit cons.
+          nibh vel velit auctor aliquetn auci elit cons.`}
         </p>
         <Link href="/instructor" passHref>
           <a className="expert--content__link">Get to know them</a>
