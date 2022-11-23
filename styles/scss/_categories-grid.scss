@@ -1,9 +1,6 @@
 .parent--grid {
   margin-bottom: 3rem;
   margin-top: -17rem;
-  &:hover {
-    background-color: rgba(85, 85, 85, 0.164);
-  }
 }
 .grids-items {
   padding: 1.5rem 1.5rem;
@@ -20,5 +17,8 @@
     color: #555;
     font-family: "poppins";
     font-weight: 600;
+    &:hover {
+      color: #555;
+    }
   }
 }

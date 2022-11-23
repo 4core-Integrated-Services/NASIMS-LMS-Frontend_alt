@@ -40,6 +40,9 @@ export default function Navbar() {
         className={`navbar navbar-expand-lg navbar-light header-navigation stricky ${
           sticky ? "stricked-menu stricky-fixed" : ""
         }`}
+        style={{
+          paddingTop: "-2rem",
+        }}
       >
         <div className="container clearfix">
           <div className="logo-box clearfix">

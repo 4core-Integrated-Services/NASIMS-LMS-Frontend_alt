@@ -8,8 +8,8 @@ import { PageWrapper } from "../../src/layout/page.wrapper";
 const CoursesPage = () => {
   return (
     <PageWrapper title={`Instructor Nasims Learning`}>
-      <PageHeader title="Courses Details" />
-      <CourseDetails />
+      <PageHeader title="Instructor Details" />
+      <CourseDetails courseId={courseId} />
     </PageWrapper>
   );
 };
