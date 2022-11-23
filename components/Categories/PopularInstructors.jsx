@@ -11,33 +11,34 @@ function PopularInstructors() {
           <div className="row row-cols-4">
             <div className="col">
               <Link href={`instructor-details/1`}>
-                <div className="popular">
+                <div className="popularr">
                   <img
                     src="/assets/images/teach1.jpg"
                     alt="teach"
-                    className="popular--image"
+                    className="popularr--image"
                   />
-                  <div className="popular-content">
-                    <h1 className="popular--name">daniel scoff</h1>
-                    <p className="popular--subtext">
+                  <div className="popularr-content">
+                    <h1 className="popularr--name">daniel scoff</h1>
+                    <p className="popularr--subtext">
                       User Experience Design, User Interface Design
                     </p>
-                    <p className="popular--rating">
-                      <span className="popular--rating--span">
+                    <p className="popularr--rating">
+                      <span className="popularr--rating--span">
                         4 <RatingIcon />
                       </span>{" "}
                       instructor Rating
                     </p>
-                    <p className="popular--students">
+                    <p className="popularr--students">
                       {" "}
-                      <span className="popular--students--span">
+                      <span className="popularr--students--span">
                         {" "}
                         50,000
                       </span>{" "}
                       students
                     </p>{" "}
-                    <p className="popular--courses">
-                      <span className="popular--courses--span">15</span> courses
+                    <p className="popularr--courses">
+                      <span className="popularr--courses--span">15</span>{" "}
+                      courses
                     </p>
                   </div>
                 </div>
@@ -45,33 +46,34 @@ function PopularInstructors() {
             </div>
             <div className="col">
               <Link href={`instructor-details/2`}>
-                <div className="popular">
+                <div className="popularr">
                   <img
                     src="/assets/images/teach2.jpg"
                     alt="teach"
-                    className="popular--image"
+                    className="popularr--image"
                   />
-                  <div className="popular-content">
-                    <h1 className="popular--name">daniel scoff</h1>
-                    <p className="popular--subtext">
+                  <div className="popularr-content">
+                    <h1 className="popularr--name">daniel scoff</h1>
+                    <p className="popularr--subtext">
                       User Experience Design, User Interface Design
                     </p>
-                    <p className="popular--rating">
-                      <span className="popular--rating--span">
+                    <p className="popularr--rating">
+                      <span className="popularr--rating--span">
                         4 <RatingIcon />
                       </span>{" "}
                       instructor Rating
                     </p>
-                    <p className="popular--students">
+                    <p className="popularr--students">
                       {" "}
-                      <span className="popular--students--span">
+                      <span className="popularr--students--span">
                         {" "}
                         50,000
                       </span>{" "}
                       students
                     </p>{" "}
-                    <p className="popular--courses">
-                      <span className="popular--courses--span">15</span> courses
+                    <p className="popularr--courses">
+                      <span className="popularr--courses--span">15</span>{" "}
+                      courses
                     </p>
                   </div>
                 </div>
@@ -79,33 +81,34 @@ function PopularInstructors() {
             </div>
             <div className="col">
               <Link href={`instructor-details/3`}>
-                <div className="popular">
+                <div className="popularr">
                   <img
                     src="/assets/images/teach3.jpg"
                     alt="teach"
-                    className="popular--image"
+                    className="popularr--image"
                   />
-                  <div className="popular-content">
-                    <h1 className="popular--name">daniel scoff</h1>
-                    <p className="popular--subtext">
+                  <div className="popularr-content">
+                    <h1 className="popularr--name">daniel scoff</h1>
+                    <p className="popularr--subtext">
                       User Experience Design, User Interface Design
                     </p>
-                    <p className="popular--rating">
-                      <span className="popular--rating--span">
+                    <p className="popularr--rating">
+                      <span className="popularr--rating--span">
                         4 <RatingIcon />
                       </span>{" "}
                       instructor Rating
                     </p>
-                    <p className="popular--students">
+                    <p className="popularr--students">
                       {" "}
-                      <span className="popular--students--span">
+                      <span className="popularr--students--span">
                         {" "}
                         50,000
                       </span>{" "}
                       students
                     </p>{" "}
-                    <p className="popular--courses">
-                      <span className="popular--courses--span">15</span> courses
+                    <p className="popularr--courses">
+                      <span className="popularr--courses--span">15</span>{" "}
+                      courses
                     </p>
                   </div>
                 </div>
@@ -113,33 +116,34 @@ function PopularInstructors() {
             </div>
             <div className="col">
               <Link href={`instructor-details/4`}>
-                <div className="popular">
+                <div className="popularr">
                   <img
                     src="/assets/images/teach4.jpg"
                     alt="teach"
-                    className="popular--image"
+                    className="popularr--image"
                   />
-                  <div className="popular-content">
-                    <h1 className="popular--name">daniel scoff</h1>
-                    <p className="popular--subtext">
+                  <div className="popularr-content">
+                    <h1 className="popularr--name">daniel scoff</h1>
+                    <p className="popularr--subtext">
                       User Experience Design, User Interface Design
                     </p>
-                    <p className="popular--rating">
-                      <span className="popular--rating--span">
+                    <p className="popularr--rating">
+                      <span className="popularr--rating--span">
                         4 <RatingIcon />
                       </span>{" "}
                       instructor Rating
                     </p>
-                    <p className="popular--students">
+                    <p className="popularr--students">
                       {" "}
-                      <span className="popular--students--span">
+                      <span className="popularr--students--span">
                         {" "}
                         50,000
                       </span>{" "}
                       students
                     </p>{" "}
-                    <p className="popular--courses">
-                      <span className="popular--courses--span">15</span> courses
+                    <p className="popularr--courses">
+                      <span className="popularr--courses--span">15</span>{" "}
+                      courses
                     </p>
                   </div>
                 </div>
