@@ -12,9 +12,11 @@ const CoursesPage = () => {
     query: { courseId },
   } = useRouter();
   return (
-    <PageWrapper title={`Instructor Nasims Learning`}>
-      <PageHeader title="Courses Details" />
+    <PageWrapper title={` Nasims Learning`}>
+      <NavBar />
+      {/* <PageHeader title="Courses Details" /> */}
       <CourseDetails courseId={courseId} />
+      <Footer />
     </PageWrapper>
   );
 };
