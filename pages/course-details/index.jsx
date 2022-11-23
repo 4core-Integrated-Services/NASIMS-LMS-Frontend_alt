@@ -4,15 +4,13 @@ import NavBar from "../../components/NavMenu/NavBar";
 import PageHeader from "../../components/NavMenu/PageHeader";
 import Footer from "../../components/Footer/Footer";
 import CourseDetails from "../../components/Courses/CourseDetails";
-
+import { PageWrapper } from "../../src/layout/page.wrapper";
 const CoursesPage = () => {
   return (
-    <Layout pageTitle="Nasims | Course Details">
-      <NavBar />
+    <PageWrapper title={`Instructor Nasims Learning`}>
       <PageHeader title="Courses Details" />
       <CourseDetails />
-      <Footer />
-    </Layout>
+    </PageWrapper>
   );
 };
 
