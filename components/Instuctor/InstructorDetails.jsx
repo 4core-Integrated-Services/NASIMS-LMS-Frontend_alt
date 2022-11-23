@@ -112,7 +112,7 @@ const InstructorDetails = ({ instructorId }) => {
               <div className="team-one__content">
                 <h2 className="team-one__name">
                   <a href="team-details.html">
-                    {instructor?.instructorName ?? "James Bond"}
+                    {instructor?.name ?? "James Bond"}
                   </a>
                 </h2>
                 <p className="team-one__designation">Instructor</p>

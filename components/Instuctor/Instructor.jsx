@@ -6,61 +6,48 @@ const Instructor = () => {
   return (
     <section className="team-one team-page">
       <div className="container">
-        <div className="row">
-          {
-            /**
-             * @type {{id: number; instructorName: string; instructorImage: string;}}
-             */
-
-            instructorData.map((instructor, index) => {
-              return (
-                <div
-                  className="col-xl-3 col-lg-6 col-md-6 col-sm-12"
-                  key={instructor?.id ?? index}
-                >
-                  <div className="team-one__single">
-                    <div className="team-one__image">
-                      <img
-                        src={instructor.instructorImage}
-                        alt="instructor image"
-                        style={{
-                          width: 206,
-                          height: 206,
-                          backgroundPosition: "center top",
-                          backgroundSize: "cover",
-                        }}
-                      />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            flexWrap: "wrap",
+          }}
+        >
+          {instructorData.map((instructor) => {
+            return (
+              <div className="bslide-content" key={instructor?.id}>
+                <div className="bcard-wrapper">
+                  <div className="bcard">
+                    <div className="bimage-content">
+                      <span className="boverlay"></span>
+                      <div className="bcard-image">
+                        <div
+                          className="bcard-img"
+                          style={{
+                            backgroundImage: `url("${instructor?.instructorImage}")`,
+                          }}
+                          role="img"
+                          alt="instructor"
+                        ></div>
+                      </div>
                     </div>
-                    <div className="team-one__content">
-                      <h2 className="team-one__name">
-                        <Link href={`/instructor-details/${instructor.id}`}>
-                          <a>{instructor.instructorName}</a>
-                        </Link>
-                      </h2>
-                      <p className="team-one__designation">Instructor</p>
-                      <p className="team-one__text">
-                        There are many varia of passages of lorem.
-                      </p>
-                    </div>
-                    <div className="team-one__social">
-                      <a href="#">
-                        <i className="fab fa-twitter"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fab fa-facebook-square"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fab fa-pinterest-p"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fab fa-instagram"></i>
-                      </a>
+                    <div className="bcard-content">
+                      <h2 className="bname">{instructor?.name}</h2>
+                      <p className="bdescription">{instructor?.description}</p>
+                      <Link
+                        href={`/instructor-details/${instructor?.id}`}
+                        passHref
+                      >
+                        <button className="bBtn">View More</button>
+                      </Link>
                     </div>
                   </div>
                 </div>
-              );
-            })
-          }
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

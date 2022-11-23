@@ -1,5 +1,6 @@
 import react from "react";
 import instructorData from "../data/instructors";
+import Link from "next/link";
 
 export default function BestInstructor() {
   return (
@@ -27,7 +28,12 @@ export default function BestInstructor() {
                   <div className="bcard-content">
                     <h2 className="bname">{instructor?.name}</h2>
                     <p className="bdescription">{instructor?.description}</p>
-                    <button className="bBtn">View More</button>
+                    <Link
+                      href={`/instructor-details/${instructor?.id}`}
+                      passHref
+                    >
+                      <button className="bBtn">View More</button>
+                    </Link>
                   </div>
                 </div>
               </div>
