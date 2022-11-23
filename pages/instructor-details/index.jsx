@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const InstructorPage = () => {
   return <></>;
@@ -6,10 +6,7 @@ const InstructorPage = () => {
 
 export async function getStaticProps(context) {
   return {
-    redirect: {
-      destination: '/instructor',
-      permanent: true
-    }
+    props: {},
   };
 }
 
